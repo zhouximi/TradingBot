@@ -1,13 +1,13 @@
-package com.example.demo;
+package com.zxm.tradingbot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SwingTradingBotApplication {
+public class TradingBotApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SwingTradingBotApplication.class, args);
+		SpringApplication.run(TradingBotApplication.class, args);
 	}
 
 }
