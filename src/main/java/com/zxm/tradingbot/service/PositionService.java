@@ -1,11 +1,12 @@
 package com.zxm.tradingbot.service;
 
 import java.util.List;
+import java.util.concurrent.CompletableFuture;
 
 import org.springframework.stereotype.Service;
 
 import com.zxm.tradingbot.ibkr.IBKRClient;
-import com.zxm.tradingbot.model.Position;
+import com.zxm.tradingbot.ibkr.IBKRPosition;
 
 @Service
 public class PositionService {
@@ -15,7 +16,7 @@ public class PositionService {
         this.ibkrClient = ibkrClient;
     }
 
-    public List<Position> getPositions() {
-        return ibkrClient.getPositions();
+    public CompletableFuture<List<IBKRPosition>> requestPositions() {
+        return ibkrClient.requestPositions();
     }
 }

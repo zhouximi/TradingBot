@@ -1,11 +1,13 @@
 package com.zxm.tradingbot.controller;
 
-import com.zxm.tradingbot.model.Position;
-import com.zxm.tradingbot.service.PositionService;
+import java.util.List;
+import java.util.concurrent.CompletableFuture;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
+import com.zxm.tradingbot.ibkr.IBKRPosition;
+import com.zxm.tradingbot.service.PositionService;
 
 @RestController
 public class PositionController {
@@ -17,7 +19,7 @@ public class PositionController {
     }
 
     @GetMapping("/api/positions")
-    public List<Position> getPositions() {
-        return positionService.getPositions();
+    public CompletableFuture<List<IBKRPosition>> getPositions() {
+        return positionService.requestPositions();
     }
 }
