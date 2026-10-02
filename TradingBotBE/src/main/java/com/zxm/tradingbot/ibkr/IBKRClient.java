@@ -13,7 +13,6 @@ import com.ib.client.EClientSocket;
 import com.ib.client.EJavaSignal;
 import com.ib.client.EReader;
 import com.ib.client.EReaderSignal;
-import com.zxm.tradingbot.model.HistoricalBar;
 
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
