@@ -4,6 +4,36 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
+# Python virtual environments and bytecode
+.venv/
+.venv-*/
+__pycache__/
+*.py[cod]
+
+# Local secrets and environment overrides
+.env
+.env.*
+!.env.example
+
+# macOS and editor backup files
+.DS_Store
+*.bkp
+
+# Runtime logs
+Script/Log/
+*.log
+
+# Local Stooq source datasets (stored in PostgreSQL after import)
+Script/nasdaq stocks/
+Script/nyse stocks/
+Script/nysemkt stocks/
+
+# Frontend dependencies and generated output
+node_modules/
+dist/
+dist-ssr/
+*.local
+
 ### STS ###
 .apt_generated
 .classpath
